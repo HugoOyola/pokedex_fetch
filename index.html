@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pokedex - Hugo Oyola</title>
+  </head>
+  <body onload="verPokemon()">
+    <header class="header-logo">
+      <img src="./img/pokeapi_logo.png" alt="Logo de PokeAPI" />
+    </header>
+    <main>
+      <div class="pokedex-marco">
+        <div class="pokedex-pantalla">
+          <div class="pokedex-resultado">
+            <div class="pokemon">
+              <h2 id="txtNombre"></h2>
+              <img id="imgPokemon" />
+              <h3>Tipo:</h3>
+              <p id="txtTipo"></p>
+            </div>
+            <div class="details-pokemon">
+              <div class="peso">
+                <h3>Peso:</h3>
+                <p id="txtPeso"></p>
+              </div>
+              <div class="altura">
+                <h3>Altura:</h3>
+                <p id="txtAltura"></p>
+              </div>
+            </div>
+          </div>
+          <div class="content-buscar">
+            <h2>Buscar Pokemon:</h2>
+            <input min="1" max="807" type="text" id="num" onchange="verPokemon()" />
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>Pokedex creada por Hugo Oyola</p>
+    </footer>
+    <script src="index.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
